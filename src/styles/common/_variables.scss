@@ -1,5 +1,6 @@
 /** Colors */
-$color-brand:             #50e3c2; // blue-green
+$color-brand:             #4fe3c1; // blue-green
+$color-primary:           #4fe3c1; // blue-green
 
 $color-neutral-black:     #000;
 $color-neutral-dark:      #222;
@@ -15,7 +16,7 @@ $link-hover-time:       0.2s;
 /** Fonts */
 $font-web-safe-sans:    "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-web-safe-serif:   Georgia, serif;
-$font-primary:          $font-web-safe-sans;
+$font-primary:          'lato', $font-web-safe-sans;
 
 /** Layout  */
 $column-gap: 20px;
