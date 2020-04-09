@@ -8,19 +8,23 @@ const HowItWorks = () => {
       .then(response => response.json())
       .then(resultData => {
         let resultFiltered = [];
+        let contentSorted = [];
         for(let step in resultData) {
+          contentSorted = resultData[step].versionContent;
+          contentSorted.sort((a, b) => new Date(b.effectiveDate) - new Date(a.effectiveDate));
+
           resultFiltered.push({
             'stepNumber':    resultData[step].stepNumber,
             'displayNumber': (resultData[step].stepNumber > 9) ?
                               resultData[step].stepNumber :
                               '0' + resultData[step].stepNumber,
-            'latestTitle':   resultData[step].versionContent[0].title,
-            'latestBody':    resultData[step].versionContent[0].body
+            'latestTitle':   contentSorted[0].title,
+            'latestBody':    contentSorted[0].body,
+            'latestDate':    contentSorted[0].effectiveDate
           })
         }
         resultFiltered.sort((a, b) => (a.stepNumber > b.stepNumber) ? 1 : -1);
 
-        console.log(resultFiltered);
         setStepData(resultFiltered);
       })
   }, [])
