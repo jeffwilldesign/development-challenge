@@ -5,15 +5,13 @@
   padding: 300px 0 80px;
 
   &__background {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: url('../images/photo-couch.jpg') no-repeat center;
+    @include background-cover-image();
+
+    background-image: url('../images/photo-couch.jpg');
     background-image: image-set('../images/photo-couch.jpg' 1x,
                                 '../images/photo-couch_2x.jpg' 2x);
-    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__text {

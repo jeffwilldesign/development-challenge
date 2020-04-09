@@ -1,4 +1,5 @@
 .button {
+  display: inline-block;
   background-color: $color-primary;
   color: $color-text-dark;
   font-family: $font-primary;
@@ -9,4 +10,9 @@
   text-transform: uppercase;
   padding: 18px 48px;
   border-radius: 100px;
+
+  &:hover {
+    background-color: darken($color-primary, 17.5%);
+    color: $color-text-dark;
+  }
 }

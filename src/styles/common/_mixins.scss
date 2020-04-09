@@ -1,0 +1,19 @@
+// Usage: rem(16px);
+@function rem($size, $base: 16px) {
+  @return #{$size / $base}rem;
+}
+
+// Usage: @include remify(font-size, 16px);
+@mixin remify($property, $size, $base: 16px) {
+  #{$property}: rem($size, $base);
+}
+
+@mixin background-cover-image() {
+  display: block;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

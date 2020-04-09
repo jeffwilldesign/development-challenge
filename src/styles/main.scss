@@ -1,9 +1,11 @@
 @import "common/variables";
+@import "common/mixins";
 
 // CSS Reset
 @import "common/reset";
 
 // Common site styles
+@import "common/fonts";
 @import "common/global";
 @import "common/headlines";
 
