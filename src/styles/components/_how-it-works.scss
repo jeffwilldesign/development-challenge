@@ -1,0 +1,17 @@
+.how-it-works {
+  display: flex;
+  flex-direction: row;
+
+  .how-steps {
+    display: flex;
+    flex-direction: column;
+
+    &__number {
+      @include remify('font-size', 60px);
+
+      display: inline-block;
+      letter-spacing: -0.025em;
+      border-bottom: 4px solid $color-primary;
+    }
+  }
+}

@@ -6,7 +6,7 @@ const Hero = () => (
     <div class="hero__background"></div>
 
     <div class="hero__text">
-      <h2>New Games & Accessories</h2>
+      <h2 class="h3">New Games & Accessories</h2>
       <h1>Monthly packages.<br />
       Excitement delivered daily.</h1>
 
