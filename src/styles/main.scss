@@ -5,6 +5,9 @@
 
 // Common site styles
 @import "common/global";
+@import "common/headlines";
 
 // Component styles
+@import 'components/buttons';
 @import 'components/header';
+@import 'components/hero';

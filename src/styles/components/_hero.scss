@@ -1,0 +1,23 @@
+.hero {
+  position: relative;
+  background-color: $color-neutral-dark;
+  color: $color-text-light;
+  padding: 300px 0 80px;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../images/photo-couch.jpg') no-repeat center;
+    background-image: image-set('../images/photo-couch.jpg' 1x,
+                                '../images/photo-couch_2x.jpg' 2x);
+    background-size: cover;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 10;
+  }
+}

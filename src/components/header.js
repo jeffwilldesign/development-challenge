@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
       className="header__brand"
       to="/"
     >
-      <span class="sr-only">{siteTitle}</span>
+      <span class="sr-only">Home page</span>
     </Link>
   </header>
 )
