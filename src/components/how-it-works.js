@@ -1,17 +1,44 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
-const HowItWorks = () => (
-  <div class="how-it-works">
-    <h3 class="h2">How It Works</h3>
-    <ul class="how-steps list--unstyled">
-      <li class="how-steps__item">
-        <span class="how-steps__number">01</span>
-        <h4>Do a Thing</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.</p>
-      </li>
-    </ul>
-  </div>
-)
+const HowItWorks = () => {
+  const [stepData, setStepData] = useState([]);
+  useEffect(() => {
+    // Fetch step content from API
+    fetch(`https://uqnzta2geb.execute-api.us-east-1.amazonaws.com/default/FrontEndCodeChallenge`)
+      .then(response => response.json())
+      .then(resultData => {
+        let resultFiltered = [];
+        for(let step in resultData) {
+          resultFiltered.push({
+            'stepNumber':    resultData[step].stepNumber,
+            'displayNumber': (resultData[step].stepNumber > 9) ?
+                              resultData[step].stepNumber :
+                              '0' + resultData[step].stepNumber,
+            'latestTitle':   resultData[step].versionContent[0].title,
+            'latestBody':    resultData[step].versionContent[0].body
+          })
+        }
+        resultFiltered.sort((a, b) => (a.stepNumber > b.stepNumber) ? 1 : -1);
+
+        console.log(resultFiltered);
+        setStepData(resultFiltered);
+      })
+  }, [])
+
+  return (
+    <div className="how-it-works">
+      <h3 className="h2">How It Works</h3>
+      <ul className="how-steps list--unstyled">
+        {stepData.map((step) =>
+          <li key={step.stepNumber}>
+            <span className="how-steps__number">{ step.displayNumber }</span>
+            <h4>{ step.latestTitle }</h4>
+            <p>{ step.latestBody }</p>
+          </li>
+        )}
+      </ul>
+    </div>
+  )
+}
 
 export default HowItWorks
