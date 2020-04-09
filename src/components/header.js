@@ -3,12 +3,12 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header class="header">
+  <header className="header">
     <Link
       className="header__brand"
       to="/"
     >
-      <span class="sr-only">Home page</span>
+      <span className="sr-only">Home page</span>
     </Link>
   </header>
 )
