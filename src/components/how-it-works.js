@@ -30,7 +30,7 @@ const HowItWorks = () => {
   }, [])
 
   return (
-    <div className="how-it-works">
+    <div className="how-it-works grid-inner-content">
       <h3 className="h2">How It Works</h3>
       <ul className="how-steps list--unstyled">
         {stepData.map((step) =>

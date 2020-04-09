@@ -18,6 +18,13 @@ $font-web-safe-sans:    "Helvetica Neue", Helvetica, Arial, "Lucida Grande", san
 $font-web-safe-serif:   Georgia, serif;
 $font-primary:          'lato', $font-web-safe-sans;
 
+/** Breakpoints */
+$breakpoint-sm: 0px;
+$breakpoint-md: 640px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
 /** Layout  */
+$grid-width: 1130px;
 $column-gap: 20px;
 $spacer: 16px;

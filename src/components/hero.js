@@ -5,12 +5,12 @@ const Hero = () => (
   <div className="hero">
     <div className="hero__background"></div>
 
-    <div className="hero__text">
+    <div className="hero__text grid-inner-content">
       <h2 className="h3">New Games & Accessories</h2>
       <h1>Monthly packages.<br />
       Excitement delivered daily.</h1>
 
-      <p>What’s the best way to shop for the latest video games and peripherals? How about never
+      <p className="hero__body">What’s the best way to shop for the latest video games and peripherals? How about never
       shopping at all? You’ll get new stuff on your doorstep — every month.</p>
 
       <Link
