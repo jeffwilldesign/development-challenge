@@ -12,11 +12,17 @@
   &__background {
     @include background-cover-image();
 
-    background-image: url('../images/photo-couch.jpg');
-    background-image: image-set('../images/photo-couch.jpg' 1x,
-                                '../images/photo-couch_2x.jpg' 2x);
+    background-image: url('../images/photo-couch-mobile.jpg');
+    background-image: image-set('../images/photo-couch-mobile.jpg' 1x,
+                                '../images/photo-couch-mobile_2x.jpg' 2x);
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (min-width: $breakpoint-md) {
+      background-image: url('../images/photo-couch.jpg');
+      background-image: image-set('../images/photo-couch.jpg' 1x,
+                                  '../images/photo-couch_2x.jpg' 2x);
+    }
   }
 
   &__text {
