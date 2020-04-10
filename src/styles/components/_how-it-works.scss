@@ -1,17 +1,56 @@
 .how-it-works {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-top: 45px;
+  margin-bottom: 100px - $column-gap * 2;
+
+  .h2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
 
   .how-steps {
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex: 1 0 100%;
+      width: 100%;
+      text-align: center;
+      padding-left: $column-gap / 2;
+      padding-right: $column-gap / 2;
+      margin-bottom: $column-gap * 2;
+
+      @media (min-width: $breakpoint-md) {
+        flex: 1 0 50%;
+        width: 50%;
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        flex: 1 0 25%;
+        width: 25%;
+      }
+
+      p {
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
 
     &__number {
       @include remify('font-size', 60px);
 
       display: inline-block;
       letter-spacing: -0.025em;
+      padding-bottom: 10px;
       border-bottom: 4px solid $color-primary;
+      margin-bottom: 24px;
     }
   }
 }

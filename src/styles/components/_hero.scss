@@ -2,7 +2,12 @@
   position: relative;
   background-color: $color-neutral-dark;
   color: $color-text-light;
-  padding: 26% 0 6.25%;
+  padding: 52% 0 12.5%;
+
+  @media (min-width: $breakpoint-md) {
+    padding-top: 26%;
+    padding-bottom: 6.25%;
+  }
 
   &__background {
     @include background-cover-image();
@@ -29,12 +34,16 @@
     }
 
     .hero__body {
-      @include remify('font-size', 20px);
+      @include remify('font-size', 18px);
 
       max-width: 500px;
       letter-spacing: 0.01em;
       line-height: 1.35;
       margin-bottom: 30px;
+
+      @media (min-width: $breakpoint-md) {
+        @include remify('font-size', 20px);
+      }
     }
   }
 }

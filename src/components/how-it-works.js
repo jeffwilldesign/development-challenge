@@ -34,7 +34,7 @@ const HowItWorks = () => {
       <h3 className="h2">How It Works</h3>
       <ul className="how-steps list--unstyled">
         {stepData.map((step) =>
-          <li key={step.stepNumber}>
+          <li className="how-steps__item" key={step.stepNumber}>
             <span className="how-steps__number">{ step.displayNumber }</span>
             <h4>{ step.latestTitle }</h4>
             <p>{ step.latestBody }</p>

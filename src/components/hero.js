@@ -3,7 +3,7 @@ import React from "react"
 
 const Hero = () => (
   <div className="hero">
-    <div className="hero__background"></div>
+    <div className="hero__background" role="presentation"></div>
 
     <div className="hero__text grid-inner-content">
       <h2 className="h3">New Games & Accessories</h2>
