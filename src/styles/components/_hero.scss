@@ -19,6 +19,20 @@
     background-repeat: no-repeat;
   }
 
+  &__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+
+    .gatsby-image-wrapper {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
   &__text {
     position: relative;
     z-index: 10;

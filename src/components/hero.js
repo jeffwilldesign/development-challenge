@@ -1,9 +1,13 @@
 import { Link } from "gatsby"
 import React from "react"
 
+import HeroImage from "../components/hero-image"
+
 const Hero = () => (
   <div className="hero">
-    <div className="hero__background" role="presentation"></div>
+    <div className="hero__image" role="presentation">
+      <HeroImage />
+    </div>
 
     <div className="hero__text grid-inner-content">
       <h2 className="h3">New Games & Accessories</h2>
