@@ -15,12 +15,15 @@ h1:not([class]),
 h2:not([class]),
 .h2 {
   @include remify('font-size', 31px);
+
+  letter-spacing: 0.05em;
 }
 
 h3:not([class]),
 .h3 {
   @include remify('font-size', 24px);
 
+  letter-spacing: 0.01em;
   line-height: 1.125;
   // filter: drop-shadow(0px 1px 20px #000000);
 }
@@ -30,5 +33,6 @@ h4:not([class]),
   @include remify('font-size', 16px);
 
   font-weight: 700;
+  letter-spacing: 0.025em;
   text-transform: uppercase;
 }

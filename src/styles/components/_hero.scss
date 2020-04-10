@@ -2,7 +2,7 @@
   position: relative;
   background-color: $color-neutral-dark;
   color: $color-text-light;
-  padding: 300px 0 80px;
+  padding: 26% 0 6.25%;
 
   &__background {
     @include background-cover-image();
@@ -32,7 +32,7 @@
       @include remify('font-size', 20px);
 
       max-width: 500px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
       line-height: 1.35;
       margin-bottom: 30px;
     }
